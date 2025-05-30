@@ -6,24 +6,16 @@ init_db()
 flow = build_flow()
 
 state = GraphState(file_content="""
-{
-  "file_type": "JSON",
-  "intent": "User Data",
-  "user": {
-    "id": 12345,
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "roles": ["admin", "user"],
-    "profile": {
-      "age": 30,
-      "country": "USA"
-    }
-  }
-}
+Dear Vendor,
 
-Additional notes:
-- This JSON contains basic user information.
-- The intent is to classify user data for processing.
+We would like to request a quotation for the supply of 500 units of industrial-grade copper wire. Please include the delivery schedule, payment terms, and any applicable discounts in your response. The products should meet ISO quality standards and be delivered by the end of next month.
+
+Looking forward to your prompt response.
+
+Best regards,  
+Procurement Team  
+ABC Industries Pvt. Ltd.
+
 """,file_type="",intent="")
 final_state = flow.invoke(state)
 
